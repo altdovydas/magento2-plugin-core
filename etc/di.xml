@@ -5,6 +5,7 @@
     <preference for="LupaSearch\Handlers\ErrorHandlerInterface" type="LupaSearch\Handlers\RequestErrorHandler"/>
 
     <preference for="LupaSearch\LupaSearchPluginCore\Api\DocumentsApiInterface" type="LupaSearch\LupaSearchPluginCore\Model\DocumentsApi"/>
+    <preference for="LupaSearch\LupaSearchPluginCore\Api\PublicQueryApiInterface" type="LupaSearch\LupaSearchPluginCore\Model\PublicQueryApi"/>
     <preference for="LupaSearch\LupaSearchPluginCore\Api\SearchQueriesApiInterface" type="LupaSearch\LupaSearchPluginCore\Model\SearchQueriesApi"/>
     <preference for="LupaSearch\LupaSearchPluginCore\Api\SuggestionsApiInterface" type="LupaSearch\LupaSearchPluginCore\Model\SuggestionsApi"/>
     <preference for="LupaSearch\LupaSearchPluginCore\Api\Data\SearchQueries\DocumentQueryResponseInterface" type="LupaSearch\LupaSearchPluginCore\Model\Data\SearchQueries\DocumentQueryResponse"/>
