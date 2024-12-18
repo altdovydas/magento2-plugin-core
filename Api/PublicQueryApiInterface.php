@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace LupaSearch\LupaSearchPluginCore\Api;
 
-use LupaSearch\LupaSearchPluginCore\Api\Data\SearchQueries\SearchQueryInterface;
-
 interface PublicQueryApiInterface
 {
     /**
@@ -15,7 +13,7 @@ interface PublicQueryApiInterface
     public function get(string $queryKey, array $params);
 
     /**
-     * @param SearchQueryInterface|\LupaSearch\LupaSearchPluginCore\Api\Data\SearchQueries\SuggestionQueryInterface $searchQuery
+     * @param \LupaSearch\LupaSearchPluginCore\Api\Data\SearchQueries\DocumentQueryInterface|\LupaSearch\LupaSearchPluginCore\Api\Data\SearchQueries\SuggestionQueryInterface $searchQuery
      * @return \LupaSearch\LupaSearchPluginCore\Model\Data\SearchQueries\DocumentQueryResponse|\LupaSearch\LupaSearchPluginCore\Api\Data\SearchQueries\SuggestionQueryResponseInterface
      */
     public function post(string $queryKey, $searchQuery);
