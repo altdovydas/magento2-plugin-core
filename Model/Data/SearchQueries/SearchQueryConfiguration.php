@@ -18,7 +18,7 @@ class SearchQueryConfiguration implements SearchQueryConfigurationInterface
 
     private OrderedMapInterface $priorityFields;
 
-    private string $match = 'any';
+    private string $match = 'all';
 
     private OrderedMapInterface $boostPhrase;
 
