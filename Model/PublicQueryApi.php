@@ -70,7 +70,7 @@ class PublicQueryApi implements PublicQueryApiInterface
     {
         try {
             $data = $this->client->send(
-                LupaClientInterface::METHOD_GET,
+                LupaClientInterface::METHOD_POST,
                 "/query/$queryKey",
                 false,
                 JsonUtils::jsonEncode($searchQuery)
