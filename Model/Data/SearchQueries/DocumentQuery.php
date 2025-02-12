@@ -18,10 +18,7 @@ class DocumentQuery implements DocumentQueryInterface
      */
     private array $selectFields = [];
 
-    /**
-     * @var OrderedMapInterface[]
-     */
-    private array $filters = [];
+    private ?OrderedMapInterface $filters = null;
 
     /**
      * @var OrderedMapInterface[]
@@ -72,7 +69,7 @@ class DocumentQuery implements DocumentQueryInterface
     /**
      * @inheritDoc
      */
-    public function getFilters(): array
+    public function getFilters(): ?OrderedMapInterface
     {
         return $this->filters;
     }
@@ -80,7 +77,7 @@ class DocumentQuery implements DocumentQueryInterface
     /**
      * @inheritDoc
      */
-    public function setFilters(array $filters): void
+    public function setFilters(OrderedMapInterface $filters): void
     {
         $this->filters = $filters;
     }
@@ -173,7 +170,7 @@ class DocumentQuery implements DocumentQueryInterface
     public function jsonSerialize(): array
     {
         return array_filter(get_object_vars($this), static function ($value): bool {
-            return !empty($value);
+            return $value instanceof OrderedMapInterface ? !$value->isEmpty() : !empty($value);
         });
     }
 }

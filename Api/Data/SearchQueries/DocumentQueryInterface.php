@@ -29,14 +29,14 @@ interface DocumentQueryInterface extends JsonSerializable
     public function setSelectFields(array $selectFields): void;
 
     /**
-     * @return OrderedMapInterface[]
+     * @return OrderedMapInterface
      */
-    public function getFilters(): array;
+    public function getFilters(): ?OrderedMapInterface;
 
     /**
-     * @param OrderedMapInterface[] $filters
+     * @param OrderedMapInterface $filters
      */
-    public function setFilters(array $filters): void;
+    public function setFilters(OrderedMapInterface $filters): void;
 
     /**
      * @return int
