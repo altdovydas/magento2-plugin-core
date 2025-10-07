@@ -1,6 +1,6 @@
 {
     "name": "lupasearch/magento2-lupasearch-plugin-core",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "description": "LupaSearch API Core module for Magento 2",
     "type": "magento2-module",
     "config": {

@@ -40,6 +40,8 @@ class DocumentQuery implements DocumentQueryInterface
 
     private bool $trackTerm = false;
 
+    private ?OrderedMapInterface $modifiers = null;
+
     public function getSearchText(): string
     {
         return $this->searchText;
@@ -66,6 +68,16 @@ class DocumentQuery implements DocumentQueryInterface
         $this->selectFields = $selectFields;
     }
 
+    public function setModifiers(?OrderedMapInterface $modifiers): void
+    {
+        $this->modifiers = $modifiers;
+    }
+
+    public function getModifiers(): ?OrderedMapInterface
+    {
+        return $this->modifiers;
+    }
+
     /**
      * @inheritDoc
      */
@@ -77,7 +89,7 @@ class DocumentQuery implements DocumentQueryInterface
     /**
      * @inheritDoc
      */
-    public function setFilters(OrderedMapInterface $filters): void
+    public function setFilters(?OrderedMapInterface $filters): void
     {
         $this->filters = $filters;
     }
